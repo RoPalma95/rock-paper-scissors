@@ -7,7 +7,7 @@ orange: BC6C25
 */
 
 html {
-	background: url('/images/rock-paper-scissors-1280x854.jpg') center / cover no-repeat;
+	background: url('../images/rock-paper-scissors-1280x854.jpg') center / cover no-repeat;
 	--primary-font: 'Luckiest Guy', cursive;
 	--secondary-font: 'Lato', sans-serif;
 }
