@@ -7,19 +7,24 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
 	let playerMove = playerSelection.toLowerCase()	
-
+	let message = '';
 	if(playerMove === computerSelection) {
-		return 'Es un empate.';
+		message = 'Es un empate.';
 	}
 	else if (computerSelection === 'piedra' && playerMove === 'papel') {
-		return `¡Tú ganas! Papel vence a Piedra.`;
+		message = `¡Tú ganas! 
+				   Papel vence a Piedra.`;
 	} else if (computerSelection === 'papel' && playerMove === 'tijera') {
-		return `¡Tú ganas! Tijera vence a Papel.`;
+		message = `¡Tú ganas! 
+				   Tijera vence a Papel.`;
 	} else if (computerSelection === 'tijera' && playerMove === 'piedra') {
-		return `¡Tú ganas! Piedra vence a Tijera.`;
+		message = `¡Tú ganas! 
+				   Piedra vence a Tijera.`;
 	} else {
-		return `¡Tú pierdes! ${capitalize(computerSelection)} vence a ${capitalize(playerMove)}`
+		message = `¡Tú pierdes! 
+			       ${capitalize(computerSelection)} vence a ${capitalize(playerMove)}`;
 	}
+	return message;
 }
 
 function capitalize(string) {

@@ -4,7 +4,7 @@ const scissors = document.querySelector('#scissors');
 const results = document.querySelector('.results');
 const scoreboard = document.querySelector('.scoreboard');
 const finalResult = document.querySelector('.final-result');
-const restart = document.querySelector('button:last-of-type');
+const restart = document.querySelector('#restart');
 
 let playerWins = 0;
 let computerWins = 0;
@@ -17,7 +17,7 @@ function updateScore(result) {
 	scoreboard.textContent = `Jugador: ${playerWins}  Computadora: ${computerWins}  Empates: ${ties}`;
 } 
 
-function checkWinner() { //returns true if the winner, the computer or the ties have reached 5
+function checkWinner() { //returns true if the winner, the computer or the ties have reached 5. Displays new game button.
 	if(playerWins === 5) {
 		finalResult.textContent = '¡GANASTE!';
 		restart.classList.remove('restart');
@@ -40,13 +40,13 @@ function resetGame() { //shows Restart button and returns all divs and scores to
 	resetScores();
 	restart.classList.add('restart');
 	scoreboard.textContent = 'Jugador: 0  Computadora: 0  Empates: 0';
-	results.textContent = '';
+	results.textContent = 'Selecciona una de las opciones a la izquierda.';
 	finalResult.textContent = '';
 }
 
 function game(e) {
 	if(!checkWinner()){  //stops updating the screen when a winner has been established
-		results.textContent = playRound(e.target.textContent, computerPlay());
+		results.textContent = playRound(e.target.alt, computerPlay());
 		updateScore(results.textContent);
 	}
 	checkWinner(); //checks if there is a winner at the end of each round

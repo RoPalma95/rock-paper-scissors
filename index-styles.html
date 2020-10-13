@@ -4,26 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rock Paper Scissors</title>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Luckiest+Guy&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/resets.css">
 	<script src="js/script.js" defer></script>
 	<script src="js/interactivity.js" defer></script>
 </head>
 <body>
-	<h1>Piedra, Papel o Tijera</h1>
+	<main class='main-content'>
+		<div class='header'>
+			<h1>Piedra, Papel o Tijera</h1>
+			<p>Gana el primero en llegar a 5 o cuando hayan 5 empates.</p>
+		</div>
+		
+		<div class='options'>
+			<img src="images/rock.png" id="rock" alt="Piedra" title="Piedra">
+			<img src="images/paper.png" id="paper" alt="Papel" title="Papel">
+			<img src="images/scissor.png" id="scissors" alt="Tijera" title="Tijera">
+		</div>
 
-	<p>Selecciona una opci&oacute;n. Gana el primero en llegar a 5 o cuando hayan 5 empates.</p>
-
-	<div>&nbsp;</div>
-
-	<button id='rock'>Piedra</button>
-	<button id='paper'>Papel</button>
-	<button id='scissors'>Tijera</button>
-	<button class='restart'>Nuevo Juego</button>
-
-	<div class="results"></div>
-	<div class="scoreboard">Jugador: 0  Computadora: 0  Empates: 0</div>
-	<div class="final-result"></div>
+		<div class='results-box'>
+			<div class="results">Selecciona una de las opciones a la izquierda.</div>
+			<div class="scoreboard">Jugador: 0  Computadora: 0  Empates: 0</div>
+			<div class="final-result"></div>
+			<div class='restart-btn'>
+				<button id='restart' class='restart'>Nuevo Juego</button>
+			</div>
+		</div>
+	</main>
 </body>
 </html>
 
