@@ -7,7 +7,7 @@ orange: BC6C25
 */
 
 html {
-	background: url('/images/rock-paper-scissors-1280x854.jpg') center / cover no-repeat;
+	background: url("/images/rock-paper-scissors-1280x854.jpg") center / cover no-repeat;
 	--primary-font: 'Luckiest Guy', cursive;
 	--secondary-font: 'Lato', sans-serif;
 }
@@ -20,7 +20,7 @@ html {
 		"top top"
 		"content content";
 	gap: 2% 2%;
-	width: 85vw;
+	width: 75vw;
 	height: 80vh;
 	margin: 5% auto;
 	font-family: var(--secondary-font);
@@ -49,7 +49,7 @@ html {
 }
 
 .options img {
-	width: 25%;
+	width: 20%;
 }
 
 .options img:hover {
@@ -73,20 +73,40 @@ html {
 	justify-content: center;
 	background: radial-gradient(#283618, #606C38);
 	color: #FEFAE0;
+	font-size: 0.75em;
 }
 
 .scoreboard, .final-result, .restart-btn {
 	height: 10%;
 	padding-top: 1%;
 	text-align: center;
+	font-size: 0.75em;
 }
 
 .final-result {
 	font-family: var(--primary-font);
-	font-size: 1.5em;
+	font-size: 1em;
 	color: #660708;
 }
 
 .restart {
 	display: none;
+}
+
+@media only screen and (min-width: 1400px){
+	.main-content {
+		width: 85vw;	
+	}
+	
+	.results {
+		font-size: 1em;
+	}
+
+	.scoreboard, .final-result, .restart-btn {
+		font-size: 1em;
+	}
+
+	.options img {
+		width: 25%;
+	}
 }
